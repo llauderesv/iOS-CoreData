@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7165F231E4842E200A2955C /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7165F221E4842E200A2955C /* CreateTaskViewController.swift */; };
+		F7165F251E4846D900A2955C /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7165F241E4846D900A2955C /* SelectViewController.swift */; };
 		F7C6E1161E48347700963F14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C6E1151E48347700963F14 /* AppDelegate.swift */; };
 		F7C6E1181E48347700963F14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C6E1171E48347700963F14 /* ViewController.swift */; };
 		F7C6E11B1E48347800963F14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C6E1191E48347800963F14 /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F7165F221E4842E200A2955C /* CreateTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
+		F7165F241E4846D900A2955C /* SelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
 		F7C6E1121E48347700963F14 /* TaskScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskScheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C6E1151E48347700963F14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7C6E1171E48347700963F14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,10 +62,12 @@
 			children = (
 				F7C6E1151E48347700963F14 /* AppDelegate.swift */,
 				F7C6E1171E48347700963F14 /* ViewController.swift */,
+				F7165F221E4842E200A2955C /* CreateTaskViewController.swift */,
+				F7165F241E4846D900A2955C /* SelectViewController.swift */,
 				F7C6E1191E48347800963F14 /* Main.storyboard */,
-				F7C6E11F1E48347800963F14 /* Assets.xcassets */,
 				F7C6E1211E48347800963F14 /* LaunchScreen.storyboard */,
 				F7C6E1241E48347800963F14 /* Info.plist */,
+				F7C6E11F1E48347800963F14 /* Assets.xcassets */,
 				F7C6E11C1E48347800963F14 /* TaskScheduler.xcdatamodeld */,
 			);
 			path = TaskScheduler;
@@ -143,6 +149,8 @@
 				F7C6E11E1E48347800963F14 /* TaskScheduler.xcdatamodeld in Sources */,
 				F7C6E1181E48347700963F14 /* ViewController.swift in Sources */,
 				F7C6E1161E48347700963F14 /* AppDelegate.swift in Sources */,
+				F7165F251E4846D900A2955C /* SelectViewController.swift in Sources */,
+				F7165F231E4842E200A2955C /* CreateTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +312,7 @@
 				F7C6E1291E48347800963F14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
