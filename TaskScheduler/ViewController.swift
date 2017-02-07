@@ -21,12 +21,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Connect the table to the delegate and datasource
         tblView.delegate = self
         tblView.dataSource = self
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        getTask()
-        tblView.reloadData()
+        // Reload the table after deletion has been finished
+        refreshTableView()
     }
     
     // Setup the number of rows in side the tableview
@@ -51,7 +50,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let task = tasks[indexPath.row]
         
-        performSegue(withIdentifier: "selectTask", sender: task)
+        //performSegue(withIdentifier: "selectTask", sender: task)
+        showAlertDialog(task: task)
     }
     
     
@@ -79,6 +79,41 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    func showAlertDialog(task: Task) {
+        
+        // Initialize the alert dialog
+        let alertController = UIAlertController(title: "Delete task", message: "Are you sure you want to delete this task? This action cannot be undone once you delete.", preferredStyle: UIAlertControllerStyle.alert)
+        
+        // Create a button inside uialertcontroller
+        let destructiveAction = UIAlertAction(title: "Yes", style: UIAlertActionStyle.destructive) { (result: UIAlertAction) in
+            
+            
+            
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            context.delete(task)
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            
+            // Reload the table after deletion has been finished
+            self.refreshTableView()
+        }
+        
+        let okAction = UIAlertAction(title: "No", style: UIAlertActionStyle.default) { (result: UIAlertAction) in
+        }
+        
+        // Add the button in the alertcontroller
+        alertController.addAction(okAction)
+        alertController.addAction(destructiveAction)
+        
+        // present the alertcontroller in the view
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    // Function for refreshing the table view
+    func refreshTableView() {
+        self.getTask()
+        self.tblView.reloadData()
+    }
     
     
 }

@@ -25,7 +25,6 @@ class SelectViewController: UIViewController {
             lblTask.text = tasks!.name!
         }
         
-        
     }
     
     @IBAction func btnCompleteTask(_ sender: Any) {
